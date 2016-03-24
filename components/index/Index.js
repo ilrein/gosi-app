@@ -1,4 +1,5 @@
 import React from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import Render from './Render';
 
 const {
@@ -8,10 +9,11 @@ const {
 
 const baseStyles = StyleSheet.create({
   container: {
-    marginTop: 40,
+    marginTop: 80,
   },
   header: {
-    textAlign: 'center',
+    // textAlign: 'center',
+    paddingLeft: 25,
     fontSize: 20,
     marginBottom: 20,
   },

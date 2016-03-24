@@ -1,4 +1,5 @@
 import React from 'react-native';
+const Actions = require('react-native-router-flux').Actions;
 
 const {
   View,
@@ -32,7 +33,7 @@ export default function render(baseStyle) {
         Welcome to Logistics!
       </Text>
       <TouchableHighlight
-        onPress={this.props.goToLoginView}
+        onPress={Actions.login}
         style={localStyle.buttonContainer}
       >
         <Text>
@@ -40,7 +41,7 @@ export default function render(baseStyle) {
         </Text>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={this.props.goToSignupView}
+        onPress={Actions.signup}
         style={localStyle.buttonContainer}
       >
         <Text>
