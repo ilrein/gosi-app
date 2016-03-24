@@ -27,6 +27,10 @@ export default class SignupView extends Component {
     this.setState({ password }); // eslint-disable-line
   }
 
+  onSubmit() {
+    return null;
+  }
+
   render() {
     return Render.bind(this)(baseStyles);
   }

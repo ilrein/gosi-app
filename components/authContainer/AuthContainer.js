@@ -20,7 +20,7 @@ export default class AuthContainer extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    this.state = {};
+    // this.state = {};
 
     const options = { transports: ['websocket'], forceNew: true };
     const socket = io('http://localhost:3030', options);
