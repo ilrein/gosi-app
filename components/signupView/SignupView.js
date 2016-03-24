@@ -19,6 +19,14 @@ const baseStyles = StyleSheet.create({
 });
 
 export default class SignupView extends Component {
+  onChangeText(text) {
+    this.setState({ text }); // eslint-disable-line
+  }
+
+  onChangePassword(password) {
+    this.setState({ password }); // eslint-disable-line
+  }
+
   render() {
     return Render.bind(this)(baseStyles);
   }

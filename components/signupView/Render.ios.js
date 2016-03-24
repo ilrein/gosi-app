@@ -29,6 +29,10 @@ const localStyles = StyleSheet.create({
     fontSize: 15,
     paddingLeft: 20,
   },
+  submit: {
+    textAlign: 'center',
+    backgroundColor: 'aquamarine',
+  },
 });
 
 export default function render(baseStyles) {
@@ -53,6 +57,7 @@ export default function render(baseStyles) {
             Choose Username
           </Text>
           <TextInput
+            onChangeText={this.onChangeText.bind(this)}
             style={localStyles.buttonContainer}
           />
         </View>
@@ -65,8 +70,18 @@ export default function render(baseStyles) {
             Choose Password
           </Text>
           <TextInput
+            onChangePassword={this.onChangePassword.bind(this)}
             style={localStyles.buttonContainer}
           />
+        </View>
+      </TouchableHighlight>
+      <TouchableHighlight>
+        <View>
+          <Text
+            style={[localStyles.buttonContainer, localStyles.submit]}
+          >
+            Submit
+          </Text>
         </View>
       </TouchableHighlight>
     </View>
