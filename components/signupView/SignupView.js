@@ -3,6 +3,7 @@ import React from 'react-native';
 const {
   Component,
   StyleSheet,
+  AsyncStorage,
 } = React;
 
 import Render from './Render';
@@ -19,6 +20,11 @@ const baseStyles = StyleSheet.create({
 });
 
 export default class SignupView extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.app = this.props.app;
+  }
+
   onChangeText(text) {
     this.setState({ text }); // eslint-disable-line
   }
@@ -28,7 +34,16 @@ export default class SignupView extends Component {
   }
 
   onSubmit() {
-    return null;
+    const userData = {
+      email: this.state.email,
+      password: this.state.password,
+    };
+
+    // this.app.service('users').create(userData).then((result) => {
+    //   this.app.authenticate({
+    //
+    //   })
+    // });
   }
 
   render() {
